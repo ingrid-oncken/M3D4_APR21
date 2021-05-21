@@ -131,8 +131,8 @@
           .map(
             (book) => `
               <ul class="list-group">
-              <li class="list-group-item list-group-item-info"  onclick="addToCart(event)">"${book.title}</li>
-              <li class="list-group-item list-group-item-light">€${book.price}</li>
+              <li class="list-group-item list-group-item-info table table-hover" onclick="addToCart(event)">"${book.title}"</li>
+              <li class="list-group-item list-group-item-light table table-hover">€${book.price}</li>
               </ul>
                `
           )
@@ -155,6 +155,8 @@
         cart.push(e.target.parentNode)
         cart.forEach((book) => {
           document.querySelector("#cart-ul").appendChild(book)
+          // book.title.toLowerCase().includes(query.toLowerCase())
+
         })
       }
     </script>
